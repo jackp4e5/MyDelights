@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Delights - Restaurante</title>
+    <link rel="stylesheet" href="./src/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <nav class="nav">
+        <div class="nav__container">
+          <a class="nav_logo" href="#">My Delights</a>
+
+          <label class="nav__toggle">
+            <input class="nav__input" type="checkbox" id="menu-input" />
+          </label>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="dropdown__link" href="">
+                <label for="item_menu">Menú</label>
+                <img
+                  class="dropdown__arrow"
+                  src="./src/assets/arrow_down.svg"
+                  alt=""
+                />
+                <input
+                  type="radio"
+                  id="item_menu"
+                  class="dropdown__check"
+                  name="nav"
+                />
+              </a>
+              <div class="nav__item_grapper">
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item">
+                    <a class="dropdown__anchor" href="#platos"
+                      >Platos a la carta</a
+                    >
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__anchor" href="#corrientazo"
+                      >Corrientazos</a
+                    >
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__anchor" href="#bebidas">Bebidas</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a class="dropdown__link" href="">
+                <label for="item_servicio">Servicios</label>
+                <img
+                  class="dropdown__arrow"
+                  src="./src/assets/arrow_down.svg"
+                  alt=""
+                />
+                <input
+                  type="radio"
+                  id="item_servicio"
+                  class="dropdown__check"
+                  name="nav"
+                />
+              </a>
+              <div class="nav__item_grapper">
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item">
+                    <a class="dropdown__anchor" href="#banquetes">Banquetes</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__anchor" href="#bufetes">Bufetes</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__anchor" href="#eventosFamiliares"
+                      >Eventos Familiares</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item">
+              <a class="dropdown__link" href="">
+                <label for="item_contacto">Contacto</label>
+                <img
+                  class="dropdown__arrow"
+                  src="./src/assets/arrow_down.svg"
+                  alt=""
+                />
+                <input
+                  type="radio"
+                  id="item_contacto"
+                  class="dropdown__check"
+                  name="nav"
+                />
+              </a>
+              <div class="nav__item_grapper">
+                <ul class="dropdown__menu">
+                  <li class="dropdown__item">
+                    <a class="dropdown__anchor" href="">Platos a la carta</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__anchor" href="">Corrientazos</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__anchor" href="">Bebidas</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="arrow__home">
+      <a href="#header"><img src="./src/assets/arrow-home.svg" alt="arrow" /></a>
+    </div>
+    <section class="menu">
+      <h1 class="menu__heading">Menú</h1>
+
+      <div class="menu__container">
+        <h2 id="platos">Platos a la Carta</h2>
+
+        <div class="menu__item">
+          <img src="src/assets/Plato 1.webp" alt="Plato 1" />
+          <div class="menu__item_grapper">
+            <h3>Plato 1</h3>
+            <p class="menu_dish">carne bistec</p>
+            <p class="menu_price">Precio: <span>$48,000</span></p>
+            <input class="button" type="submit" value="Ordenar" />
+          </div>
+        </div>
+        <hr />
+        <div class="menu__item">
+          <img src="src/assets/Plato 2.jpg" alt="Plato 2" />
+          <div class="menu__item_grapper">
+            <h3>Plato 2</h3>
+            <p class="menu_dish">churrasco de res</p>
+            <p class="menu_price">Precio: <span>$45,000</span></p>
+            <input class="button" type="submit" value="Ordenar" />
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      <div class="menu">
+        <h2 id="corrientazo">Comida Corriente</h2>
+
+        <div class="menu__item">
+          <img src="src/assets/corriente 1.jpg" alt="Plato corriente" />
+          <div class="menu__item_grapper">
+            <h3>Plato 1</h3>
+            <p class="menu_dish">corrientazo</p>
+            <p class="menu_price">Precio: <span>$32,000</span></p>
+            <input class="button" type="submit" value="Ordenar" />
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="menu__item">
+          <img src="src/assets/corriente 2.jpg" alt="Plato corriente" />
+          <div class="menu__item_grapper">
+            <h3>Plato 2</h3>
+            <p class="menu_dish">lenteja</p>
+            <p class="menu_price">Precio: <span>$28,000</span></p>
+            <input class="button" type="submit" value="Ordenar" />
+          </div>
+        </div>
+
+        <hr />
+      </div>
+      <div class="menu">
+        <h2 id="bebidas">Bebidas</h2>
+
+        <div class="menu__item">
+          <img src="src/assets/bebida 1.jpg" alt="cócteles" />
+          <div class="menu__item_grapper">
+            <h3>Bebida 1</h3>
+            <p class="menu_dish">cócteles</p>
+            <p class="menu_price">Precio: <span>$18,000</span></p>
+            <input class="button" type="submit" value="Ordenar" />
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="menu__item">
+          <img src="src/assets/bebida 2.webp" alt="limonada" />
+          <div class="menu__item_grapper">
+            <h3>Bebida 2</h3>
+            <p class="menu_dish">limonadas</p>
+            <p class="menu_price">Precio: <span>$15,000</span></p>
+            <input class="button" type="submit" value="Ordenar" />
+          </div>
+        </div>
+
+        <hr />
+        <div class="menu__item">
+          <img src="src/assets/bebida 3.webp" alt="jugos" />
+          <div class="menu__item_grapper">
+            <h3>Bebida 3</h3>
+            <p class="menu_dish">Jugos</p>
+            <p class="menu_price">Precio: <span>$15,000</span></p>
+            <input class="button" type="submit" value="Ordenar" />
+          </div>
+        </div>
+
+        <hr />
+      </div>
+    </section>
+
+    <section class="service">
+      <h2 class="service__heading">Servicios</h2>
+
+      <div class="service-item">
+        <h3 id="banquetes">Banquetes</h3>
+        <p class="welcome">¡Bienvenidos a My Delights!</p>
+        <p class="presentation">
+          Descubre una experiencia culinaria sin igual con nuestro buffet
+          exclusivo, diseñado para satisfacer todos los paladares. ¡Es el lugar
+          perfecto para disfrutar de una comida variada, deliciosa y memorable!
+        </p>
+        <div class="service__grapper">
+          <h3 class="question">¿Qué ofrecemos?</h3>
+          <ol class="presentation__list">
+            <li class="presentation__item">
+              <h4>variedad sin limites:</h4>
+              <ul class="description">
+                <li>
+                  Cocina internacional: desde sabrosos tacos mexicanos hasta
+                  exquisita pasta italiana.
+                </li>
+                <li>Platos tradicionales de nuestra región.</li>
+                <li>Opciones vegetarianas, veganas y sin gluten.</li>
+              </ul>
+            </li>
+            <li class="presentation__item">
+              <h4>Estaciones en vivo:</h4>
+              <ul class="description">
+                <li>Parrilla al momento.</li>
+                <li>Sushi fresco preparado frente a ti.</li>
+                <li>Postres artesanales hechos en el acto.</li>
+              </ul>
+            </li>
+            <li class="presentation__item">
+              <h4>Bebidas incluidas:</h4>
+              <ul class="description">
+                <li>
+                  Amplia selección de jugos naturales, refrescos y cócteles.
+                </li>
+                <li>Cafés y tés gourmet.</li>
+              </ul>
+            </li>
+            <li class="presentation__item">
+              <h4>Horarios:</h4>
+              <ul class="description">
+                <li><span>Desayuno:</span> 7:00 a.m. - 11:00 a.m.</li>
+                <li><span>Almuerzo: </span>12:00 p.m. - 3:30 p.m</li>
+                <li><span>Cena: </span>6:00 p.m. - 10:00 p.m.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+        <div class="service__images">
+          <div class="bamquete__img"></div>
+          <div class="bamquete__img2"></div>
+          <div class="bamquete__img3"></div>
+        </div>
+      </div>
+      <hr class="hr">
+      <div class="service-item">
+        <h3 id="bufetes">Buffet</h3>
+        <p class="welcome">¡Bienvenidos a My Delights!</p>
+        <p class="presentation">
+          Descubre una experiencia culinaria sin igual con nuestro buffet
+          exclusivo, diseñado para satisfacer todos los paladares. ¡Es el lugar
+          perfecto para disfrutar de una comida variada, deliciosa y memorable!
+        </p>
+        <div class="service__grapper">
+          <h3 class="question">¿Qué ofrecemos?</h3>
+          <ol class="presentation__list">
+            <li class="presentation__item">
+              <h4>variedad sin limites:</h4>
+              <ul class="description">
+                <li>
+                  Cocina internacional: desde sabrosos tacos mexicanos hasta
+                  exquisita pasta italiana.
+                </li>
+                <li>Platos tradicionales de nuestra región.</li>
+                <li>Opciones vegetarianas, veganas y sin gluten.</li>
+              </ul>
+            </li>
+            <li class="presentation__item">
+              <h4>Estaciones en vivo:</h4>
+              <ul class="description">
+                <li>Parrilla al momento.</li>
+                <li>Sushi fresco preparado frente a ti.</li>
+                <li>Postres artesanales hechos en el acto.</li>
+              </ul>
+            </li>
+            <li class="presentation__item">
+              <h4>Bebidas incluidas:</h4>
+              <ul class="description">
+                <li>
+                  Amplia selección de jugos naturales, refrescos y cócteles.
+                </li>
+                <li>Cafés y tés gourmet.</li>
+              </ul>
+            </li>
+            <li class="presentation__item">
+              <h4>Horarios:</h4>
+              <ul class="description">
+                <li><span>Desayuno:</span> 7:00 a.m. - 11:00 a.m.</li>
+                <li><span>Almuerzo: </span>12:00 p.m. - 3:30 p.m</li>
+                <li><span>Cena: </span>6:00 p.m. - 10:00 p.m.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+        <div class="service__images">
+          <div class="buffet__img"></div>
+          <div class="buffet__img2"></div>
+        </div>
+      </div>
+      <hr class="hr">
+      <div class="service-item">
+        <h3 id="eventosFamiliares">Eventos Familiares</h3>
+        <p class="welcome">¡Bienvenidos a My Delights!</p>
+        <p class="presentation">
+          Descubre una experiencia culinaria sin igual con nuestro buffet
+          exclusivo, diseñado para satisfacer todos los paladares. ¡Es el lugar
+          perfecto para disfrutar de una comida variada, deliciosa y memorable!
+        </p>
+        <div class="service__grapper">
+          <h3 class="question">¿Qué ofrecemos?</h3>
+          <ol class="presentation__list">
+            <li class="presentation__item">
+              <h4>variedad sin limites:</h4>
+              <ul class="description">
+                <li>
+                  Cocina internacional: desde sabrosos tacos mexicanos hasta
+                  exquisita pasta italiana.
+                </li>
+                <li>Platos tradicionales de nuestra región.</li>
+                <li>Opciones vegetarianas, veganas y sin gluten.</li>
+              </ul>
+            </li>
+            <li class="presentation__item">
+              <h4>Estaciones en vivo:</h4>
+              <ul class="description">
+                <li>Parrilla al momento.</li>
+                <li>Sushi fresco preparado frente a ti.</li>
+                <li>Postres artesanales hechos en el acto.</li>
+              </ul>
+            </li>
+            <li class="presentation__item">
+              <h4>Bebidas incluidas:</h4>
+              <ul class="description">
+                <li>
+                  Amplia selección de jugos naturales, refrescos y cócteles.
+                </li>
+                <li>Cafés y tés gourmet.</li>
+              </ul>
+            </li>
+            <li class="presentation__item">
+              <h4>Horarios:</h4>
+              <ul class="description">
+                <li><span>Desayuno:</span> 7:00 a.m. - 11:00 a.m.</li>
+                <li><span>Almuerzo: </span>12:00 p.m. - 3:30 p.m</li>
+                <li><span>Cena: </span>6:00 p.m. - 10:00 p.m.</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+        <div class="service__images">
+          <div class="evento__img"></div>
+          <div class="evento__img2"></div>
+          <div class="evento__img3"></div>
+        </div>
+      </div>
+      <hr class="hr">
+    </section>
+
+    <footer>
+      <section id="contact">
+        <h1>Contacto</h1>
+        <p>Teléfono: +57 123 456 7890</p>
+        <p>Dirección: Calle 123 #45-67, Bogotá</p>
+        <p>Email: contacto@mydelights.com</p>
+      </section>
+      <p>&copy; 2025 My Delights. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>
