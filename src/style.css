@@ -7,6 +7,7 @@
   --font: "Montserrat", serif;
   --gold: #b28c02;
   --gold_light: #fcc500;
+  --blue: rgb(54, 83, 145);
 }
 
 * {
@@ -204,14 +205,14 @@ h2 {
     position: absolute;
     background-color: var(--primary);
     display: grid;
-    align-items: center;
     width: 250px;
-    height: 200px;
-    top: var(--top, -250px);
+    height: 250px;
+    top: var(--top, -550px);
     left: -74px;
     border-radius: 15px;
     opacity: var(--opacity, 0);
     transition: top 0.2s, opacity 0.7s;
+    justify-content: center;
   }
   .nav__item:has(:checked) {
     --top: 0;
@@ -220,7 +221,10 @@ h2 {
 }
 .dropdown__item {
   width: 80%;
-  margin-left: auto;
+}
+.dropdown__item img {
+  width: 50px;
+  margin: 0 auto;
 }
 .dropdown__arrow {
   margin-left: 5px;
@@ -410,9 +414,6 @@ footer {
   text-align: center;
   padding: 10px 0;
   margin-top: 20px;
-  background-image: url("./assets/logo_1.png");
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 footer p {
