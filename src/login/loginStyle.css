@@ -1,0 +1,137 @@
+:root {
+  --primary: #754f21;
+  --secundary: #bead80;
+  --white: #ffffff;
+  --orange: rgb(238, 144, 30);
+  --brown: rgb(63, 43, 17);
+  --font: "Montserrat", serif;
+  --gold: #b28c02;
+  --gold_light: #fcc500;
+  --blue: rgb(54, 83, 145);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*  */
+.login {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font);
+
+  background: url("../assets/logo.png"),
+    linear-gradient(354deg, #7c1034, #470a1e, rgb(2, 52, 52) 100%);
+  background-size: contain;
+  background-position: center;
+  background-blend-mode: overlay;
+  color: var(--white);
+  padding: 20px;
+}
+.login__header {
+  font-size: 40px;
+  margin-top: 30px;
+  color: var(--gold_light);
+}
+
+.form {
+  margin-top: 20px;
+  text-align: center;
+  padding: 25px;
+
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  background: rgba(130, 124, 124, 0.2);
+}
+
+.form__fields {
+  display: flex;
+  flex-flow: column;
+  text-align: left;
+  font-size: 20px;
+}
+.form__label {
+  margin: 10px 0 5px 0;
+  letter-spacing: 2px;
+}
+
+.galeria__icono-boton{
+  border: var(--white) 1px solid;
+  border-radius: 50%;
+  backdrop-filter: blur(15px);
+  background: rgba(130, 124, 124, 0.2);
+  color: var(--white);
+  transition:background .5s ease-out ;
+}
+.galeria__icono-boton:hover{
+  background: var(--primary);
+  color: var(--white);
+}
+.close  {
+  margin-top: 15px;
+  width: 100%;
+  padding: 0 15px;
+  text-align: end;
+}
+
+input,
+select {
+  font-size: 18px;
+  padding: 5px;
+  caret-color: var(--gold);
+}
+
+fieldset {
+  border: 1px solid var(--gold_light);
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.form__fields input,
+select {
+  background-color: transparent;
+  border: var(--gold) 1px solid;
+  color: var(--gold_light);
+}
+
+.form__fields input:focus {
+  color: red;
+}
+
+.form__fields input:focus-visible {
+  outline: none;
+}
+
+@media (min-width: 764px) {
+  fieldset {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+legend {
+  letter-spacing: 3px;
+  font-size: 25px;
+  color: var(--gold_light);
+  border: 1px solid var(--gold_light);
+  padding: 5px;
+}
+
+.submit {
+  margin: 15px 0px;
+  width: 200px;
+  padding: 10px;
+  border: var(--gold) 1px solid;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  transition: background-color 0.2s, font-size 0.2s;
+}
+.submit:hover {
+  background-color: var(--gold);
+  font-size: 16px;
+}

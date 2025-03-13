@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="loginStyle.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <script defer type="module" src="crud.js"></script>
+  </head>
+  <!-- •	Ingreso de nuevos clientes:
+o	Datos requeridos: cédula, sexo, fecha de nacimiento, dirección, teléfono, correo electrónico, entre otros.
+ -->
+  <body>
+    <section class="login overlay">
+      <div class="close">
+        <a href="../../index.html">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            class="galeria__icono-boton"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </a>
+      </div>
+      <h1 class="login__header">Registro de clientes</h1>
+      <form class="form">
+        <fieldset>
+          <legend>My Delights</legend>
+          <div class="form__fields">
+            <label class="form__label" for="name">Nombre</label>
+            <input
+              class="form__input"
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form__fields">
+            <label class="form__label" for="IDnumber">Documento</label>
+            <input
+              class="form__input"
+              type="text"
+              id="IDnumber"
+              name="IDnumber"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form__fields">
+            <label class="form__label" for="date">Fecha de Nacimiento</label>
+            <input class="form__input" type="date" id="date" name="date" />
+          </div>
+          <div class="form__fields">
+            <label class="form__label" for="address"
+              >Direccion de recidencia</label
+            >
+            <input
+              class="form__input"
+              type="text"
+              id="address"
+              name="address"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form__fields">
+            <label class="form__label" for="tel">teléfono</label>
+            <input
+              class="form__input"
+              type="text"
+              id="tel"
+              name="tel"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form__fields">
+            <label class="form__label" for="mail">Correo </label>
+            <input
+              class="form__input"
+              type="text"
+              id="mail"
+              name="mail"
+              autocomplete="off"
+            />
+          </div>
+          <div class="form__fields">
+            <label class="form__label" for="select">Sexo</label>
+            <select  class="form__input"  name="sexo" id="sexo">
+              <option value=""disabled  selected>--Seleccione--</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+              <option value="Otro">Otro</option>
+            </select>
+
+
+           
+          </div>
+        </fieldset>
+        <button id="submitClient" class="submit" type="submit">
+          Enviar Datos
+        </button>
+      </form>
+    </section>
+  </body>
+</html>
