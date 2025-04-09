@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Delights - Restaurante</title>
+    <link rel="shortcut icon" href="./src/assets/whiteFivicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="./src/carrito.css" />
+    <link rel="stylesheet" href="./src/loginModal.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,20 +19,45 @@
   </head>
   <body>
     <header class="header" id="header">
-      
       <nav class="nav">
-     
         <div class="nav__container">
           <a class="nav_logo" href="#">
-            <svg class="logo" viewBox="0 0 2048 2048" fill="currentColor" width="5100" height="5100" xmlns="http://www.w3.org/2000/svg"><path d="M449 867h31l19 3 20 6 18 8 17 10 16 13 14 14 10 13 9 15 9 19 6 20 3 16 1 12v16l-2 18-5 21-6 16-11 21-8 11-9 11-14 14-16 12-18 10-17 7-17 5-19 3h-31l-19-3-20-6-16-7-16-9-13-10-10-9-11-11-11-15-10-17-8-20-4-13-3-17-1-10v-20l3-22 4-15 6-16 8-16 10-15 9-11 15-15 16-12 18-10 14-6 20-6zm1 8l-18 3-18 5-18 8-17 10-11 9-12 11-12 14-10 16-8 16-6 18-4 20-1 11v16l2 18 5 20 6 15 8 16 2 1 4-8 4-1 3-9 5-5 8-1 6-1 31-13 14-6 8-2 2-14 2 4 10 9h-5l1 4 6 7-15-6 4 4 10 6 14 5h3v-6l-4-6-11-9-10-8-1-3 2-4v-14l-2-9-9-16-3-10-7-8-1-4v-12l5-6 11-8 4-10 7-6 11-4 13-4 10-6 2-1h10l10 3 8 5 5 6 2 6v7l-2 8 1 12v14l-1 7v11l-1 14 6 2-1 3-7 1h-2l-1 4v7l1 8-4 5-6 4v4h5l1 1 1 8 8 1 6 4 25 9 14 4h6l3 6 4-1h7l3 3v6l-1 3 9 6 7 8 4-5 8-14 7-16 5-16 3-17 1-12v-12l-2-19-4-17-7-19-10-19-12-16-12-13-13-11-19-12-15-7-18-6-15-3-8-1zm25 49v1h5v-1zm5 1l3 2 9 5 7 8 3 6 1-4-4-8-9-7-5-2zm-17 4l-17 4-10 5-5 6 1 4h7l5-4 5-6 7-4 3-1-8 9-1 5 1 1 9-1 17-7h11l6 4 2 2-1-6-7-8-7-3zm13 22l-31 6v1l5 1-5 6-1 6v7l-3 1v3l-1 3v8l4 8 1 13 4 6 8 7 14 8 7-1h3l1-6-2-5v-7l10 1-2 3 1 7 3 7 4-1 1-15-7-5-4-1h-9l-13 4h-9l-4-4h8l10-8 5-3 2-6v4l7-1 7 1 3-2-2 5 6 5 4 4 2-12v-18l-2-2h-10l-2 2 9 3v1l-4 1h-4l-2-5-1-7 11 1 6 2-2-14-5-8-8-4zm-51 1l-14 13-1 2v6l4-6v5h4l4-5 4-12zm-2 34l-2 2 6 4 1 2h2v-5l-4-3zm0 7l-1 1v8l-1 2 6 10 4 1 2-2-1-5h-2l-2-5-3-4 1-5zm-4 5l1 2zm1 2l1 2zm64 6l-2 5h4l-1-5zm-32 21l5 5 9 5 3-1-11-6-4-3zm38 27l-13 12-1 2v7l8-1 10-5v-9l-1-6zm-74 7l-20 8-31 13 1 6 6 15 7 28 4 18 2 1v-12l-3-24-4-19 7 19 5 22 3 19h1l-1-26 2-3 3 3 15 28 5 9 8 2-2-36-4-41-2-16 9 48 7 45 3 3 1-2-3-20 4 22 11 2h29l18-3 18-5 2-1 1-4 2 3 17-8 3-7v-24l-4-17-8-16-1-3 8 7 7 11 3 7h1l1-13 3 25 2 8h1v-33l1-7v-10l-1-1h-7v-2l-16-4-18-6-7-2-3-4h-5l-2 5-10 5-12 3h-17l-15-4-17-9-4-3zm-58 23l-5 3-2 3v12l3 12-1 1-2-7-3-3-4 1-1 5 8 10 9 10 11 10 4 2v-13l-4-24-5-15-6-7zm202 2l-2 1-2 9v28l2 15 4-2 1-1 3-18 1-2v15l4-2 4-4-1-4 1-4v-11l-4-6-5-1 1-4 1-8-1-1zm21 23l-6 12 1 2 8-9-1-4zM688 947h29l21 102 2-6 20-94 1-2h28l1 22 2 108v23l-1 1h-19l-1-1-1-27-1-47-1-26-20 98-1 3h-16l-3-8-19-92-1 18-1 51-1 30-1 1h-20v-37l2-116zM1453 947h28v64h31v-64h28v153l-1 1h-27v-70h-31v69l-1 1h-27zM981 947h46l15 3 10 5 8 9 4 11 2 18v59l-1 14-3 12-6 10-7 6-8 4-9 2-12 1h-39zm28 20l-1 1v112l1 1h15l7-3 4-5 2-8v-83l-2-8-5-5-6-2zM1374 945h9l16 3 10 6 6 8 4 9 2 12v15h-27l-1-19-3-9-5-3h-12l-6 4-3 9v86l3 10 5 4 3 1h9l6-3 4-8 1-4 1-26h-16v-17h42v77l-1 1h-17l-2-7-1-6-6 8-8 5-8 2-15-1-11-4-9-8-6-12-3-13v-81l4-16 4-8 6-7 12-6zM1696 945h8l14 3 8 6 6 8 4 10 2 9v6l-8 2-16 2-3-16-3-6-5-2h-8l-5 3-3 7v8l3 8 6 8 11 9 17 16 8 9 7 14 2 10v11l-2 9-5 9-5 6-10 6-6 2-7 1-16-1-11-4-10-9-6-12-3-14v-7l12-3 12-2 3 17 4 8 6 4h9l4-2 3-6v-12l-4-10-10-11-11-9-16-15-7-9-4-10-1-6v-14l4-13 6-8 11-7 7-2zM1096 947h64v20l-36 1v42l28 1v19l-28 1v49l36 1v20h-64zM814 947h26l8 25 10 32 1 2 16-55 2-4h25l-3 11-16 50-10 31-1 61-1 1h-26l-1-60-29-88zM1564 947h76v21h-24v133h-27l-1-1V968h-24zM1186 947h28v134h37v20h-64l-1-1zM1276 947h28v153l-1 1h-26l-1-1z"/><path d="M458 970l13 1 8 1 1 2-2 10-4 4h-2l1-6-5 1h-11l1-3 2-1 13-1-7-2h-11l2-5zM496 1073l6 1 1 1v6l-3 2-6-1-1-3-16 5-6 1h-16l-9-5 3-1 7 2h15l17-3 4-1zM436 1122l10 2v6l-3 3-7-1-2-6zM502 1122l7 1 3 1-1 7-3 2-6-1-2-3 1-6zM432 1072l6 2-2 1v6l-3 2-6-1-1-6 3-3zM471 956h11l10 3 6 4h-3l-11-4-12-1h-5zM508 1085h2l1 4v13h-1l-2-11zM432 1134h1v5h-1zM490 988l2 4h-2zM431 1129l1 4zM444 1078l2 1zM442 1077l2 1zM440 1076l2 1zM438 1075l2 1zM430 1071l2 1zM428 1070l2 1zM439 1058l2 1zM425 1040l2 1z"/></svg>
+            <svg
+              class="logo"
+              viewBox="0 0 2048 2048"
+              fill="currentColor"
+              width="100"
+              height="200"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M449 867h31l19 3 20 6 18 8 17 10 16 13 14 14 10 13 9 15 9 19 6 20 3 16 1 12v16l-2 18-5 21-6 16-11 21-8 11-9 11-14 14-16 12-18 10-17 7-17 5-19 3h-31l-19-3-20-6-16-7-16-9-13-10-10-9-11-11-11-15-10-17-8-20-4-13-3-17-1-10v-20l3-22 4-15 6-16 8-16 10-15 9-11 15-15 16-12 18-10 14-6 20-6zm1 8l-18 3-18 5-18 8-17 10-11 9-12 11-12 14-10 16-8 16-6 18-4 20-1 11v16l2 18 5 20 6 15 8 16 2 1 4-8 4-1 3-9 5-5 8-1 6-1 31-13 14-6 8-2 2-14 2 4 10 9h-5l1 4 6 7-15-6 4 4 10 6 14 5h3v-6l-4-6-11-9-10-8-1-3 2-4v-14l-2-9-9-16-3-10-7-8-1-4v-12l5-6 11-8 4-10 7-6 11-4 13-4 10-6 2-1h10l10 3 8 5 5 6 2 6v7l-2 8 1 12v14l-1 7v11l-1 14 6 2-1 3-7 1h-2l-1 4v7l1 8-4 5-6 4v4h5l1 1 1 8 8 1 6 4 25 9 14 4h6l3 6 4-1h7l3 3v6l-1 3 9 6 7 8 4-5 8-14 7-16 5-16 3-17 1-12v-12l-2-19-4-17-7-19-10-19-12-16-12-13-13-11-19-12-15-7-18-6-15-3-8-1zm25 49v1h5v-1zm5 1l3 2 9 5 7 8 3 6 1-4-4-8-9-7-5-2zm-17 4l-17 4-10 5-5 6 1 4h7l5-4 5-6 7-4 3-1-8 9-1 5 1 1 9-1 17-7h11l6 4 2 2-1-6-7-8-7-3zm13 22l-31 6v1l5 1-5 6-1 6v7l-3 1v3l-1 3v8l4 8 1 13 4 6 8 7 14 8 7-1h3l1-6-2-5v-7l10 1-2 3 1 7 3 7 4-1 1-15-7-5-4-1h-9l-13 4h-9l-4-4h8l10-8 5-3 2-6v4l7-1 7 1 3-2-2 5 6 5 4 4 2-12v-18l-2-2h-10l-2 2 9 3v1l-4 1h-4l-2-5-1-7 11 1 6 2-2-14-5-8-8-4zm-51 1l-14 13-1 2v6l4-6v5h4l4-5 4-12zm-2 34l-2 2 6 4 1 2h2v-5l-4-3zm0 7l-1 1v8l-1 2 6 10 4 1 2-2-1-5h-2l-2-5-3-4 1-5zm-4 5l1 2zm1 2l1 2zm64 6l-2 5h4l-1-5zm-32 21l5 5 9 5 3-1-11-6-4-3zm38 27l-13 12-1 2v7l8-1 10-5v-9l-1-6zm-74 7l-20 8-31 13 1 6 6 15 7 28 4 18 2 1v-12l-3-24-4-19 7 19 5 22 3 19h1l-1-26 2-3 3 3 15 28 5 9 8 2-2-36-4-41-2-16 9 48 7 45 3 3 1-2-3-20 4 22 11 2h29l18-3 18-5 2-1 1-4 2 3 17-8 3-7v-24l-4-17-8-16-1-3 8 7 7 11 3 7h1l1-13 3 25 2 8h1v-33l1-7v-10l-1-1h-7v-2l-16-4-18-6-7-2-3-4h-5l-2 5-10 5-12 3h-17l-15-4-17-9-4-3zm-58 23l-5 3-2 3v12l3 12-1 1-2-7-3-3-4 1-1 5 8 10 9 10 11 10 4 2v-13l-4-24-5-15-6-7zm202 2l-2 1-2 9v28l2 15 4-2 1-1 3-18 1-2v15l4-2 4-4-1-4 1-4v-11l-4-6-5-1 1-4 1-8-1-1zm21 23l-6 12 1 2 8-9-1-4zM688 947h29l21 102 2-6 20-94 1-2h28l1 22 2 108v23l-1 1h-19l-1-1-1-27-1-47-1-26-20 98-1 3h-16l-3-8-19-92-1 18-1 51-1 30-1 1h-20v-37l2-116zM1453 947h28v64h31v-64h28v153l-1 1h-27v-70h-31v69l-1 1h-27zM981 947h46l15 3 10 5 8 9 4 11 2 18v59l-1 14-3 12-6 10-7 6-8 4-9 2-12 1h-39zm28 20l-1 1v112l1 1h15l7-3 4-5 2-8v-83l-2-8-5-5-6-2zM1374 945h9l16 3 10 6 6 8 4 9 2 12v15h-27l-1-19-3-9-5-3h-12l-6 4-3 9v86l3 10 5 4 3 1h9l6-3 4-8 1-4 1-26h-16v-17h42v77l-1 1h-17l-2-7-1-6-6 8-8 5-8 2-15-1-11-4-9-8-6-12-3-13v-81l4-16 4-8 6-7 12-6zM1696 945h8l14 3 8 6 6 8 4 10 2 9v6l-8 2-16 2-3-16-3-6-5-2h-8l-5 3-3 7v8l3 8 6 8 11 9 17 16 8 9 7 14 2 10v11l-2 9-5 9-5 6-10 6-6 2-7 1-16-1-11-4-10-9-6-12-3-14v-7l12-3 12-2 3 17 4 8 6 4h9l4-2 3-6v-12l-4-10-10-11-11-9-16-15-7-9-4-10-1-6v-14l4-13 6-8 11-7 7-2zM1096 947h64v20l-36 1v42l28 1v19l-28 1v49l36 1v20h-64zM814 947h26l8 25 10 32 1 2 16-55 2-4h25l-3 11-16 50-10 31-1 61-1 1h-26l-1-60-29-88zM1564 947h76v21h-24v133h-27l-1-1V968h-24zM1186 947h28v134h37v20h-64l-1-1zM1276 947h28v153l-1 1h-26l-1-1z"
+              />
+              <path
+                d="M458 970l13 1 8 1 1 2-2 10-4 4h-2l1-6-5 1h-11l1-3 2-1 13-1-7-2h-11l2-5zM496 1073l6 1 1 1v6l-3 2-6-1-1-3-16 5-6 1h-16l-9-5 3-1 7 2h15l17-3 4-1zM436 1122l10 2v6l-3 3-7-1-2-6zM502 1122l7 1 3 1-1 7-3 2-6-1-2-3 1-6zM432 1072l6 2-2 1v6l-3 2-6-1-1-6 3-3zM471 956h11l10 3 6 4h-3l-11-4-12-1h-5zM508 1085h2l1 4v13h-1l-2-11zM432 1134h1v5h-1zM490 988l2 4h-2zM431 1129l1 4zM444 1078l2 1zM442 1077l2 1zM440 1076l2 1zM438 1075l2 1zM430 1071l2 1zM428 1070l2 1zM439 1058l2 1zM425 1040l2 1z"
+              />
+            </svg>
           </a>
-          <a class="nav__link" href="#">
-            <svg class="shopping" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="currentColor"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/></svg>
+          <a class="nav__car" href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="shopping"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"
+              />
+            </svg>
+
+            <span class="cuenta__carrito">0</span>
           </a>
           <label class="nav__toggle">
             <input class="nav__input" type="checkbox" id="menu-input" />
           </label>
-          
+
           <ul class="nav__list">
             <li class="nav__item">
               <a class="dropdown__link" href="">
@@ -134,23 +162,221 @@
               </div>
             </li>
             <li class="nav__item">
-              <a class="login__a" href="./src/login/login.html">Login</a>
+              <a class="login__a" href="#">Login</a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
+   
+    <div class="container__toast" id="container__toast">
+      <!--       <div class="content">
+        <div class="icon">${icons[tipo]}</div>
+        <div class="text">
+          <h3 class="title">¡${titulo}!</h3>
+          <p class="description">${mensaje}.</p>
+        </div>
+      </div>
+      <button class="btn__close">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+          />
+        </svg>
+      </button> -->
+    </div>
 
     <div class="arrow__home">
       <a href="#menu"><img src="./src/assets/arrow-home.svg" alt="arrow" /></a>
     </div>
 
+    <div class="carrito">
+      <div class="carrito__container">
+        <div class="header__carrito">
+          <h2 class="carrito__heading">Carrito</h2>
+          <a href="#" class="carrito__close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3.646 3.646a.5.5 0 0 1 .708 0L8 7.293l4.646-4.647a.5.5 0 0 1 .708.708L8.707 8l4.647 4.646a.5.5 0 0 1-.708.708L8 8.707 3.354 13.354a.5.5 0 0 1-.708-.708L7.293 8 2.646 3.354a.5.5 0 0 1 0-.708z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="carrito__items">
+          <!--   <div class="carrito__item">
+            <div class="carrito__item_grapper">
+              <h3>Plato 1</h3>
+              <p class="carrito_dish">carne bistec</p>
+              <p class="carrito_price">Precio: <span>$48,000</span></p>
+            </div>
+            <a href="#" class="carrito__trash">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-trash3-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5m-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5M4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06m6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528M8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5"
+                />
+              </svg>
+            </a>
+          </div> -->
+        </div>
+
+        <div class="carrito__total">
+          <p class="carrito__total_price">
+            Total: <span class="carrito__total_price--neto">$0</span>
+          </p>
+          <input class="button" type="submit" value="Pagar" />
+        </div>
+      </div>
+    </div>
+
+    <div class="login__modal">
+      <div class="login__modal__container">
+        <div class="login__modal__header">
+          <h2 class="login__modal__heading">Log in</h2>
+          <a class="cerrarSesion" href="#">
+            <p>log out</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-box-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="login__modal__close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3.646 3.646a.5.5 0 0 1 .708 0L8 7.293l4.646-4.647a.5.5 0 0 1 .708.708L8.707 8l4.647 4.646a.5.5 0 0 1-.708.708L8 8.707 3.354 13.354a.5.5 0 0 1-.708-.708L7.293 8 2.646 3.354a.5.5 0 0 1 0-.708z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="login__modal__content">
+          <form action="" class="login__modal__form">
+            <h2 class="login__modal__heading_form">Iniciar Seseción</h2>
+            <fieldset class="login__modal__fieldset">
+              <legend class="login__modal__legend">My Delights</legend>
+              <div class="login__modal__form__fields">
+                <label class="login__modal__form__label" for="email"
+                  >Correo</label
+                >
+                <input type="email" id="emailLogin" name="emailSearch" />
+              </div>
+              <div class="login__modal__form__fields">
+                <label class="login__modal__form__label" for="password"
+                  >Contraseña</label
+                >
+                <div class="input_icon">
+                  <input
+                    type="password"
+                    id="passwordLogin"
+                    name="passwordSearch"
+                  />
+                  <a href="#" class="eye">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="eye_open hide"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
+                      <path
+                        d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"
+                      />
+                    </svg> </a
+                  ><a href="" class="eye">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="eye_close"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7 7 0 0 0 2.79-.588M5.21 3.088A7 7 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474z"
+                      />
+                      <path
+                        d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <button id="login" class="login__modal__btn" type="submit">
+                Ingresar
+              </button>
+            </fieldset>
+            <div class="login__modal__footer">
+              <p class="login__modal__footer__text">¿No tienes una cuenta?</p>
+              <a
+                href="./src/pages/login.html"
+                class="login__modal__footer__link"
+                >Regístrate</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="container__toast" id="logoin__container__toast"></div>
+    </div>
+
     <section id="menu" class="menu">
+      <div class="welcome__container">
+        <div class="welcome__content">
+          <h2 class="welcome__heading">¡Bienvenidos a My Delights!</h2>
+          <p class="welcome__description">
+            Descubre una experiencia culinaria sin igual con nuestro buffet
+            exclusivo, diseñado para satisfacer todos los paladares. ¡Es el
+            lugar perfecto para disfrutar de una comida variada, deliciosa y
+            memorable!
+          </p>
+        </div>
+      </div>
       <h1 class="menu__heading">Menú</h1>
 
       <h2 id="platos">Platos a la Carta</h2>
-      <div class="menu__container">
-        <div class="menu__item">
+      <div id="platosCarta" class="menu__container">
+        <!-- <div class="menu__item">
           <div class="image__grapper">
             <img src="src/assets/Plato 1.webp" alt="Plato 1" />
           </div>
@@ -160,62 +386,28 @@
             <p class="menu_price">Precio: <span>$48,000</span></p>
             <input class="button" type="submit" value="Ordenar" />
           </div>
-        </div>
-        <div class="menu__item">
-          <div class="image__grapper">
-            <img src="src/assets/Plato 2.jpg" alt="Plato 2" />
-          </div>
-          <div class="menu__item_grapper">
-            <h3>Plato 2</h3>
-            <p class="menu_dish">churrasco de res</p>
-            <p class="menu_price">Precio: <span>$45,000</span></p>
-            <input class="button" type="submit" value="Ordenar" />
-          </div>
-        </div>
-        <div class="menu__item">
-          <div class="image__grapper">
-            <img src="src/assets/Plato 2.jpg" alt="Plato 2" />
-          </div>
-          <div class="menu__item_grapper">
-            <h3>Plato 2</h3>
-            <p class="menu_dish">churrasco de res</p>
-            <p class="menu_price">Precio: <span>$45,000</span></p>
-            <input class="button" type="submit" value="Ordenar" />
-          </div>
-        </div>
+        </div> -->
       </div>
 
       <h2 id="corrientazo">Platos Ejecutivos</h2>
-      <div class="menu__container">
-        <div class="menu__item">
+      <div id="platosEjecutivos" class="menu__container">
+        <!--   <div class="menu__item">
           <div class="image__grapper">
             <img src="src/assets/corriente 1.jpg" alt="Plato corriente" />
           </div>
 
           <div class="menu__item_grapper">
             <h3>Plato 1</h3>
-            <p class="menu_dish">corrientazo</p>
+            <p class="menu_dish">Plato ejecutivo</p>
             <p class="menu_price">Precio: <span>$32,000</span></p>
             <input class="button" type="submit" value="Ordenar" />
           </div>
-        </div>
-
-        <div class="menu__item">
-          <div class="image__grapper">
-            <img src="src/assets/corriente 2.jpg" alt="Plato corriente" />
-          </div>
-          <div class="menu__item_grapper">
-            <h3>Plato 2</h3>
-            <p class="menu_dish">lenteja</p>
-            <p class="menu_price">Precio: <span>$28,000</span></p>
-            <input class="button" type="submit" value="Ordenar" />
-          </div>
-        </div>
+        </div> -->
       </div>
 
       <h2 id="bebidas">Bebidas</h2>
-      <div class="menu__container">
-        <div class="menu__item">
+      <div id="platosBebidas" class="menu__container">
+        <!--   <div class="menu__item">
           <div class="image__grapper">
             <img src="src/assets/bebida 1.jpg" alt="cócteles" />
           </div>
@@ -225,31 +417,7 @@
             <p class="menu_price">Precio: <span>$18,000</span></p>
             <input class="button" type="submit" value="Ordenar" />
           </div>
-        </div>
-
-        <div class="menu__item">
-          <div class="image__grapper">
-            <img src="src/assets/bebida 2.webp" alt="limonada" />
-          </div>
-          <div class="menu__item_grapper">
-            <h3>Bebida 2</h3>
-            <p class="menu_dish">limonadas</p>
-            <p class="menu_price">Precio: <span>$15,000</span></p>
-            <input class="button" type="submit" value="Ordenar" />
-          </div>
-        </div>
-
-        <div class="menu__item">
-          <div class="image__grapper">
-            <img src="src/assets/bebida 3.webp" alt="jugos" />
-          </div>
-          <div class="menu__item_grapper">
-            <h3>Bebida 3</h3>
-            <p class="menu_dish">Jugos</p>
-            <p class="menu_price">Precio: <span>$15,000</span></p>
-            <input class="button" type="submit" value="Ordenar" />
-          </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -459,26 +627,6 @@
         <h2 class="login__header">Registro de clientes</h2>
         <fieldset>
           <legend>My Delights</legend>
-          <!--           <div class="form__fields">
-            <label class="form__label" for="name">Nombre</label>
-            <input
-              class="form__input"
-              type="text"
-              id="name"
-              name="name"
-              autocomplete="off"
-            />
-          </div>
-          <div class="form__fields">
-            <label class="form__label" for="IDnumber">Documento</label>
-            <input
-              class="form__input"
-              type="text"
-              id="IDnumber"
-              name="IDnumber"
-              autocomplete="off"
-            />
-          </div> -->
           <div class="form__fields">
             <label class="form__label" for="email">Correo</label>
             <input type="email" id="email" name="email" />
