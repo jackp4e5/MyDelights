@@ -8,10 +8,10 @@ header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json; charset=UTF-8");
 
-$servername = "localhost";
+$servername = "localhost"; // Cambia esto si es necesario
 $username = "root"; // Usuario de MySQL
-$password = ""; // Contraseña de MySQL
-$database = "clientes_mydelights"; // Nombre de la base de datos
+$password = "password"; // Contraseña de MySQL
+$database = "mydelights"; // Nombre de la base de datos
 
 $connection = new mysqli($servername, $username, $password);
 
@@ -41,23 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $password = $_POST["password"];
     $sexo = $_POST["sexo"];
 
-    $sql = "CREATE TABLE IF NOT EXISTS clientes (
-        Id_cliente INT AUTO_INCREMENT PRIMARY KEY,
-        Nombre VARCHAR(100) NOT NULL,
-        Documento BIGINT NOT NULL,
-        FechaNacimiento DATE NOT NULL,
-        Direccion VARCHAR(255) NOT NULL,
-        Telefono BIGINT NOT NULL,
-        Correo VARCHAR(100) NOT NULL,
-        Contraseña VARCHAR(25) NOT NULL,
-        SEXO ENUM('Masculino', 'Femenino','Otro') NOT NULL
-    )";
 
-    if ($connection->query($sql)) {
-        echo "Tabla 'cliente' creada o ya existente.";
-    } else {
-        echo "Error al crear la tabla: " . $connection->error;
-    }
 
     if (empty($nombre) || empty($IDnumber) || empty($date) || empty($address) || empty($phone) || empty($mail) || empty($password) || empty($sexo)) {
         echo json_encode(["error" => "Todos los campos son obligatorios"]);
@@ -75,6 +59,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
+    $sql = "CREATE TABLE IF NOT EXISTS clientes (
+        Id_cliente INT AUTO_INCREMENT PRIMARY KEY,
+        Nombre VARCHAR(100) NOT NULL,
+        Documento BIGINT NOT NULL,
+        FechaNacimiento DATE NOT NULL,
+        Direccion VARCHAR(255) NOT NULL,
+        Telefono BIGINT NOT NULL,
+        Correo VARCHAR(100) NOT NULL,
+        Contrasena VARCHAR(25) NOT NULL,
+        Sexo ENUM('Masculino', 'Femenino','Otro') NOT NULL
+    )";
+
+    if ($connection->query($sql)) {
+        echo json_encode(["mensaje" => "Tabla 'cliente' creada o ya existente."]);
+    } else {
+        echo json_encode(["message" => "Error al crear la tabla: {$connection->error}"]);
+    }
     $sql = "SELECT * FROM `clientes`"; // Seleccionar todos los registros de la tabla "clientes"
     $result = $connection->query($sql);
 

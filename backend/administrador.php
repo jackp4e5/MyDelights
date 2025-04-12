@@ -14,8 +14,8 @@ header("Content-Type: application/json; charset=UTF-8");
 
 $servername = "localhost";
 $username = "root"; // Usuario de MySQL
-$password = ""; // Contraseña de MySQL
-$database = "clientes_mydelights"; // Nombre de la base de datos
+$password = "password"; // Contraseña de MySQL
+$database = "mydelights"; // Nombre de la base de datos
 
 $connection = new mysqli($servername, $username, $password);
 
@@ -27,12 +27,12 @@ $connection -> select_db($database);
 // Crear la tabla de administradores si no existe
 
 $sql = "CREATE TABLE IF NOT EXISTS administrador(
- Id_administrador INt AUTO_INCREMENT PRIMARY KEY,
- Nombre VARCHAR(45) NOT NULL,
- Apellidos VARCHAR(45) NOT NULL,
- Identificacion BIGINT NOT NULL,
-    Correo VARCHAR(100) NOT NULL,
-    Contraseña VARCHAR(45) NOT NULL,
+  Id_administrador INT AUTO_INCREMENT PRIMARY KEY,
+  Nombre VARCHAR(45) NOT NULL,
+  Apellidos VARCHAR(45) NOT NULL,
+  Identificacion BIGINT NOT NULL,
+  Correo VARCHAR(100) NOT NULL,
+  Contrasena VARCHAR(45) NOT NULL
 )";
 
 if($connection-> query($sql)){

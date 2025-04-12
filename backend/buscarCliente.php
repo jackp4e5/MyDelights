@@ -12,9 +12,10 @@ header("Content-Type: application/json; charset=UTF-8");
 
 // CONEXIÓN A LA BASE DE DATOS
 $servername = "localhost";
-$username = "root";
-$password = "";
-$database = "clientes_mydelights";
+$username = "root"; // Usuario de MySQL
+$password = "password"; // Contraseña de MySQL
+$database = "mydelights"; // Nombre de la base de datos
+
 
 $connection = new mysqli($servername, $username, $password, $database);
 
