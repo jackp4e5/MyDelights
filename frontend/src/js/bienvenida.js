@@ -1,10 +1,12 @@
-const data = JSON.parse(localStorage.getItem("cliente")) || {};
+const cliente = JSON.parse(localStorage.getItem("cliente")) || {};
 
-console.log(data == {});
-if (data != {}) {
-  console.log(data);
+if (cliente != {}) {
   const bienvenida = document.querySelector(".welcome__heading");
   bienvenida.textContent = `¡${
-    data.sexo == "Masculino" ? "Bienvenido" : (data.sexo == "Femenino" ? "Bienvenida" : "Bienvenidos") 
-  } ${data.sexo ? data.nombre : ""} a My Delights!`;
+    cliente.sexo == "Masculino"
+      ? "Bienvenido"
+      : cliente.sexo == "Femenino"
+      ? "Bienvenida"
+      : "Bienvenidos"
+  } ${cliente.sexo ? cliente.nombre : ""} a My Delights!`;
 }

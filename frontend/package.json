@@ -1,17 +1,11 @@
 {
-  "name": "restaurant",
-  "type": "module",
+  "name": "frontend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "jack pachon",
-  "license": "ISC",
-  "dependencies": {
-    "cloudflared": "^0.6.0",
-    "mysql": "^2.18.1",
-    "mysql2": "^3.12.0"
-  }
+  "author": "Jack",
+  "license": "ISC"
 }

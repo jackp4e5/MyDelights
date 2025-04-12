@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../loginStyle.css" />
+    <link rel="stylesheet" href="./src/loginStyle.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,7 +12,7 @@
       rel="stylesheet"
     />
     <title>Document</title>
-    <script defer type="module" src="../js/registroClientes.js"></script>
+    <script defer type="module" src="./src/js/registroClientes.js"></script>
   </head>
   <!-- •	Ingreso de nuevos clientes:
 o	Datos requeridos: cédula, sexo, fecha de nacimiento, dirección, teléfono, correo electrónico, entre otros.
@@ -20,7 +20,7 @@ o	Datos requeridos: cédula, sexo, fecha de nacimiento, dirección, teléfono, c
   <body>
     <section class="login overlay">
       <div class="close">
-        <a href="../../index.html">
+        <a href="./index.html">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="40"
@@ -35,6 +35,7 @@ o	Datos requeridos: cédula, sexo, fecha de nacimiento, dirección, teléfono, c
           </svg>
         </a>
       </div>
+
       <h1 class="login__header">Registro de clientes</h1>
       <form id="registroForm" action="" class="form">
         <fieldset>
@@ -46,7 +47,7 @@ o	Datos requeridos: cédula, sexo, fecha de nacimiento, dirección, teléfono, c
               type="text"
               id="name"
               name="name"
-              autocomplete="off"
+              autocomplete=""
             />
           </div>
           <div class="form__fields">
@@ -56,7 +57,7 @@ o	Datos requeridos: cédula, sexo, fecha de nacimiento, dirección, teléfono, c
               type="text"
               id="IDnumber"
               name="IDnumber"
-              autocomplete="off"
+              autocomplete=""
             />
           </div>
           <div class="form__fields">
@@ -72,7 +73,7 @@ o	Datos requeridos: cédula, sexo, fecha de nacimiento, dirección, teléfono, c
               type="text"
               id="address"
               name="address"
-              autocomplete="off"
+              autocomplete=""
             />
           </div>
           <div class="form__fields">
@@ -82,7 +83,7 @@ o	Datos requeridos: cédula, sexo, fecha de nacimiento, dirección, teléfono, c
               type="text"
               id="tel"
               name="phone"
-              autocomplete="off"
+              autocomplete=""
             />
           </div>
           <div class="form__fields">
@@ -92,7 +93,7 @@ o	Datos requeridos: cédula, sexo, fecha de nacimiento, dirección, teléfono, c
               type="text"
               id="mail"
               name="mail"
-              autocomplete="off"
+              autocomplete=""
             />
           </div>
 
@@ -103,7 +104,7 @@ o	Datos requeridos: cédula, sexo, fecha de nacimiento, dirección, teléfono, c
               type="text"
               id="password"
               name="password"
-              autocomplete="off"
+              autocomplete=""
             />
           </div>
           <div class="form__fields">
@@ -120,10 +121,6 @@ o	Datos requeridos: cédula, sexo, fecha de nacimiento, dirección, teléfono, c
           Enviar Datos
         </button>
       </form>
-
-     
     </section>
-
-   
   </body>
 </html>

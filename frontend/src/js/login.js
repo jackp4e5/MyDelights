@@ -16,6 +16,15 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.style.overflow = "hidden";
     document.body.style.height = "100vh";
   });
+  const loginBtn2 = document.querySelector(".reserva__bottom");
+  loginBtn2.addEventListener("click", () => {
+    document
+      .querySelector(".login__modal")
+      .classList.add("login__modal--active");
+
+    document.body.style.overflow = "hidden";
+    document.body.style.height = "100vh";
+  });
 
   closeModal.addEventListener("click", () => {
     document
@@ -65,18 +74,18 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       const response = await fetch(url);
       const data = await response.json();
-
+      console.log(data);
+      
       if (data.error) {
         console.error("Error:", data.error);
       } else if (data.mensaje) {
-        console.log("Mensaje del servidor:", data.mensaje);
         agregarToast({
           tipo: "error",
           titulo: "Error",
-          mensaje: "Usuario no encontrado!  crea una cuenta",
+          mensaje: data.mensaje,
         });
       } else {
-        if (data[0].Contraseña === password) {
+        if (data[0].Contrasena === password) {
           agregarToast({
             tipo: "success",
             titulo: "Bienvenido",
@@ -185,6 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   logOut.addEventListener("click", () => {
     localStorage.removeItem("cliente");
+    localStorage.removeItem("carrito");
     window.location.href = "index.html";
   });
 });
