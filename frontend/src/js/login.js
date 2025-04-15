@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const login = document.querySelector(".login__modal__btn");
   const contenedorToast = document.querySelector("#logoin__container__toast");
   const closeModal = document.querySelector(".login__modal__close");
+  const settings = document.querySelector(".grapper__settings");
+  const settingsUser = document.querySelector(".user__settings");
 
   loginBtn.addEventListener("click", () => {
     document
@@ -16,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.style.overflow = "hidden";
     document.body.style.height = "100vh";
   });
+
   const loginBtn2 = document.querySelector(".reserva__bottom");
+
   loginBtn2.addEventListener("click", () => {
     document
       .querySelector(".login__modal")
@@ -24,6 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.body.style.overflow = "hidden";
     document.body.style.height = "100vh";
+  });
+
+  settings.addEventListener("click", () => {
+    console.log("settings clicked");
+    settingsUser.classList.toggle("user__settings--active");
+
   });
 
   closeModal.addEventListener("click", () => {
@@ -75,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const response = await fetch(url);
       const data = await response.json();
       console.log(data);
-      
+
       if (data.error) {
         console.error("Error:", data.error);
       } else if (data.mensaje) {
@@ -98,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
           };
           const cliente = JSON.stringify(DataCliente);
           localStorage.setItem("cliente", cliente);
-          
+
           setTimeout(() => {
             window.location.href = "index.html";
           }, 5000);
@@ -189,8 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 5000);
   };
 
-
-  const logOut = document.querySelector(".cerrarSesion");
+  const logOut = document.querySelector(".logOut");
 
   logOut.addEventListener("click", () => {
     localStorage.removeItem("cliente");
