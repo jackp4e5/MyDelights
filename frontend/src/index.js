@@ -4,4 +4,6 @@ import "./js/carrito.js";
 import "./js/menu.js";
 import "./js/login.js";
 import "./js/bienvenida.js";
+import "./js/editUser.js";
+import "./js/deleteUser.js";
 

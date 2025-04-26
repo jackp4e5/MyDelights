@@ -1,32 +1,70 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const contenedorBtn = document.querySelectorAll(".button");
-  const contenedorToast = document.querySelector("#container__toast");
-  contenedorBtn.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      agregarToast({
-        tipo: "success",
-        titulo: "Exito",
-        mensaje: `El plato ${e.target.id} se ha agregado al carrito`,
-      });
-    });
-  });
+const btnDSeleteUser = document.querySelector("#btnDeleteUser");
+const closeDeleteUser = document.querySelector(".deleteUser__close");
+const closeModalClose = document.querySelector(".deleteUser");
+const spanDeleteUser = document.querySelector("#idDeleteSpan");
+const Id_cliente = document.querySelector('input[name="Id_cliente"]');
+const form = document.querySelector(".delete__form");
+const toastContainer = document.querySelector(".delete__toast");
 
-  contenedorToast.addEventListener("click", (e) => {
-    if (e.target.closest(".btn__close")) {
-      const id = e.target.closest(".toast").id;
-      idToast = id;
-      cerrarToastID(id);
+
+
+const datauser = JSON.parse(localStorage.getItem("cliente")) || null;
+
+btnDSeleteUser.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  datauser
+    ? (spanDeleteUser.textContent = datauser.nombre)
+    : (spanDeleteUser.textContent = "No hay cliente seleccionado");
+  datauser ? (Id_cliente.value = datauser.id) : "";
+
+  closeModalClose.style.display = "flex";
+});
+
+form.addEventListener("submit", async function (event) {
+    event.preventDefault();
+  
+    const decision = form.querySelector('input[name="delete"]:checked');
+    const decisionValue = decision ? decision.value : null;
+  
+    
+  
+    if (decisionValue === "yes") {
+      try {
+        // Preparamos los datos a enviar por POST
+        const formData = new FormData();
+        formData.append('Id_cliente', Id_cliente.value);
+  
+        const response = await fetch('http://localhost/test/backend/eliminarCliente.php', {
+          method: "POST",
+          body: formData
+        });
+  
+        const data = await response.json();
+  
+        if (data.Mensaje) {
+          console.log("Cliente eliminado correctamente.");
+          localStorage.removeItem("cliente");
+            agregarToast({
+                tipo: "success",
+                titulo: "Éxito",
+                mensaje: data.Mensaje,
+            });
+
+            setTimeout(() => {
+                location.reload();
+            }, 5000);
+          
+        } else {
+          console.error("Error al eliminar el cliente:", data.error);
+        }
+      } catch (error) {
+        console.error("Error en la solicitud:", error);
+      }
+    } else {
+      console.log("Eliminación cancelada.");
     }
   });
-
-  const cerrarToastID = (id) => {
-    const toast = document.getElementById(id);
-    toast.classList.add("close__toast");
-    setTimeout(() => {
-      toast.remove();
-    }, 500);
-  };
 
   const agregarToast = ({ tipo, titulo, mensaje }) => {
     const newToast = document.createElement("div");
@@ -95,13 +133,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     newToast.innerHTML = toastHTML;
 
-    contenedorToast.appendChild(newToast);
-
-    const toastclose = document.querySelector(".toast").id;
-    console.log(toastclose);
+    toastContainer.appendChild(newToast);
 
     setTimeout(() => {
       newToast.remove();
-    }, 6000);
+    }, 5000);
   };
+
+closeDeleteUser.addEventListener("click", (e) => {
+  e.preventDefault();
+  closeModalClose.style.display = "none";
+  console.log("close deleteUser");
 });

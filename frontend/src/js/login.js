@@ -31,9 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   settings.addEventListener("click", () => {
-    console.log("settings clicked");
     settingsUser.classList.toggle("user__settings--active");
-
   });
 
   closeModal.addEventListener("click", () => {
@@ -80,11 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const url = `http://localhost/test/backend/buscarCliente.php?emailSearch=${encodeURIComponent(
       email
     )}`;
-
     try {
       const response = await fetch(url);
       const data = await response.json();
-      console.log(data);
 
       if (data.error) {
         console.error("Error:", data.error);
@@ -105,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
             nombre: data[0].Nombre,
             id: data[0].Id_cliente,
             sexo: data[0].Sexo,
+            correo: data[0].Correo,
           };
           const cliente = JSON.stringify(DataCliente);
           localStorage.setItem("cliente", cliente);

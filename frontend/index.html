@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -291,7 +291,7 @@
                     />
                   </svg>
                 </a>
-                <a class="cerrarSesion" href="#">
+                <a id="editUser" class="cerrarSesion" href="#">
                   <p>Editar usuario</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -306,7 +306,7 @@
                     />
                   </svg>
                 </a>
-                <a class="cerrarSesion" href="#">
+                <a id="btnDeleteUser" class="cerrarSesion" href="#">
                   <p>Eliminar usuario</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -415,6 +415,179 @@
       <div class="container__toast" id="logoin__container__toast"></div>
     </div>
 
+    <section class="login overlay">
+      <div class="overlay__grapper">
+        <div class="container__toast" id="overlay__toast"></div>
+        <div class="close">
+          <a href="./index.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              class="overlay__close"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <h1 class="overlay__header">Registro de clientes</h1>
+
+        <form id="formEditar" action="" class="overlay__form">
+          <fieldset>
+            <legend>My Delights</legend>
+            <div class="form__fields">
+              <label class="form__label" for="name">Nombre</label>
+              <input
+                class="form__input"
+                type="text"
+                id="name"
+                name="name"
+                autocomplete=""
+              />
+            </div>
+            <div class="form__fields">
+              <label class="form__label" for="IDnumber">Documento</label>
+              <input
+                class="form__input"
+                type="text"
+                id="IDnumber"
+                name="IDnumber"
+                autocomplete=""
+              />
+            </div>
+            <div class="form__fields">
+              <label class="form__label" for="date">Fecha de Nacimiento</label>
+              <input class="form__input" type="date" id="date" name="date" />
+            </div>
+            <div class="form__fields">
+              <label class="form__label" for="address"
+                >Direccion de recidencia</label
+              >
+              <input
+                class="form__input"
+                type="text"
+                id="address"
+                name="address"
+                autocomplete=""
+              />
+            </div>
+            <div class="form__fields">
+              <label class="form__label" for="tel">teléfono</label>
+              <input
+                class="form__input"
+                type="text"
+                id="tel"
+                name="tel"
+                autocomplete=""
+              />
+            </div>
+            <div class="form__fields">
+              <label class="form__label" for="mail">Correo </label>
+              <input
+                class="form__input"
+                type="text"
+                id="mail"
+                name="mail"
+                autocomplete=""
+                disabled
+              />
+            </div>
+
+            <div class="form__fields">
+              <label class="form__label" for="password">Contraseña </label>
+              <input
+                class="form__input"
+                type="text"
+                id="password"
+                name="password"
+                autocomplete=""
+              />
+            </div>
+            <div class="form__fields">
+              <label class="form__label" for="select">Sexo</label>
+              <select class="form__input" name="sexo" id="sexo">
+                <option value="" disabled selected>--Seleccione--</option>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+          </fieldset>
+          <input type="hidden" name="Id_cliente" value="" />
+          <button id="submitClient" class="submit" type="submit">
+            Enviar Datos
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <section class="deleteUser" id="deleteUser">
+      <div class="deleteUser__container">
+        <div class="container__toast  delete__toast" id="delete__toast"></div>
+        <div class="deleteUser__header">
+          <h2 class="deleteUser__heading">Eliminar usuario</h2>
+          <a href="#" class="deleteUser__close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-x-lg"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3.646 3.646a.5.5 0 0 1 .708 0L8 7.293l4.646-4.647a.5.5 0 0 1 .708.708L8.707 8l4.647 4.646a.5.5 0 0 1-.708.708L8 8.707 3.354 13.354a.5.5 0 0 1-.708-.708L7.293 8 2.646 3.354a.5.5 0 0 1 0-.708z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="deleteUser__content">
+          <p class="deleteUser__description">¿Está seguro de eliminar?</p>
+          <p class="deleteUser__description">
+            Al usuario <span id="idDeleteSpan"></span>
+          </p>
+
+          <form class="delete__form" action="">
+            <div class="delete__grapper">
+              <div class="delete__fils">
+                <label class="delete__label" for="yesDelete">Si</label>
+                <input
+                  class="delete__input"
+                  type="radio"
+                  id="yesDelete"
+                  name="delete"
+                  value="yes"
+                />
+              </div>
+              <div class="delete__fils delete__fils--sucess">
+                <label class="delete__label" for="deleteNo">No</label>
+                <input
+                  class="delete__input"
+                  type="radio"
+                  id="deleteNo"
+                  name="delete"
+                  value="no"
+                />
+              </div>
+            </div>
+            <input type="hidden" name="Id_cliente" value="" />
+            <input
+              type="submit"
+              id="delete"
+              class="deleteUser__btn"
+              value="Confirmar"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+
     <section id="menu" class="menu">
       <div class="welcome__container">
         <div class="welcome__content">
@@ -427,6 +600,7 @@
           </p>
         </div>
       </div>
+
       <h1 class="menu__heading">Menú</h1>
 
       <h2 id="platos">Platos a la Carta</h2>
@@ -661,40 +835,6 @@
       </div>
     </section>
 
-    <!--   <div class="modal">
-      <form action="" class="form">
-        <div class="close">
-          <a class="modal__close" href="#reservas">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
-              fill="currentColor"
-              class="galeria__icono-boton"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-              />
-            </svg>
-          </a>
-        </div>
-        <h2 class="login__header">Registro de clientes</h2>
-        <fieldset>
-          <legend>My Delights</legend>
-          <div class="form__fields">
-            <label class="form__label" for="email">Correo</label>
-            <input type="email" id="email" name="email" />
-          </div>
-          <div class="form__fields">
-            <label class="form__label" for="password">Contraseña</label>
-            <input type="password" id="password" name="password" />
-          </div>
-          <a class="reserva__bottom" href="#">Agendar</a>
-        </fieldset>
-      </form>
-    </div> -->
-
     <section class="galeria">
       <h2 class="galeria__heading">Galería</h2>
       <div class="galeria__container">
@@ -756,6 +896,7 @@
         </div>
       </div>
     </section>
+
     <footer id="footer" class="footer">
       <h3>Contacto</h3>
       <section id="contact">

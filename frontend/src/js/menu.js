@@ -15,7 +15,7 @@ platosCarta.forEach((plato) => {
           <div class="menu__item_grapper">
                 <h3>Plato ${id}</h3>
                 <p class="menu_dish">${nombre}</p>
-                <p class="menu_price">Precio: <span>$ ${precio}</span></p>
+                <p class="menu_price">Precio: <span>$ ${precio}.000</span></p>
                 <input id=${id} class="button" type="submit" value="Ordenar" />
           </div>
     </div>
@@ -36,7 +36,7 @@ platosEjecutivos.forEach((plato) => {
           <div class="menu__item_grapper">
                 <h3>Plato ${id}</h3>
                 <p class="menu_dish">${nombre}</p>
-                <p class="menu_price">Precio: <span>$ ${precio}</span></p>
+                <p class="menu_price">Precio: <span>$ ${precio}.000</span></p>
                 <input id=${id} class="button" type="submit" value="Ordenar" />
           </div>
     </div>
@@ -57,7 +57,7 @@ platosBebidas.forEach((bebida) => {
           <div class="menu__item_grapper">
                 <h3>Plato ${id}</h3>
                 <p class="menu_dish">${nombre}</p>
-                <p class="menu_price">Precio: <span>$ ${precio}</span></p>
+                <p class="menu_price">Precio: <span>$ ${precio}.000</span></p>
                 <input id=${id} class="button" type="submit" value="Ordenar" />
           </div>
     </div>
