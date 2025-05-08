@@ -129,7 +129,7 @@ const platosBebidas = [
     nombre: "Pisco sour",
     cantidad: 0,
     precio: 10,
-    img: "https://recetasdecocina.elmundo.es/wp-content/uploads/2022/05/pisco-sour.jpg",
+    img: "https://www.comeperuano.pe/wp-content/uploads/2020/06/pisco-sour-peruano.jpg",
   },
   {
     id: 19,

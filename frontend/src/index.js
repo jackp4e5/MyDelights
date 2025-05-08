@@ -6,4 +6,5 @@ import "./js/login.js";
 import "./js/bienvenida.js";
 import "./js/editUser.js";
 import "./js/deleteUser.js";
+import "./js/pay.js";
 
